@@ -18,10 +18,10 @@ CreateThread(function()
 
         for _, item in pairs(coordsToJobs) do
             local distance = #(pedCoords - item.coords)
+            local data = item.data
 
-            if distance <= item.data.marker.drawDistance then
+            if distance <= data.marker.drawDistance then
                 inRange = true
-                local data = item.data
                 DrawMarker(
                     data.marker.type,
                     item.coords.x, item.coords.y, item.coords.z,
