@@ -109,6 +109,7 @@ AddEventHandler('k3_jobBells:status', function(ringedJob, ringedLabel)
     cooldown[ringedJob].time = K3.cooldown
     notifyJob(ringedJob, xPlayer.source)
     notify(xPlayer.source, K3.messages.rungBell:format(ringedLabel))
+    cb(true)
 end)
 
 
