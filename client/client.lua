@@ -11,6 +11,7 @@ end)
 
 CreateThread(function()
     while true do
+        Wait(1)
         local ped = PlayerPedId()
         local pedCoords = GetEntityCoords(ped)
         local inRange = false
@@ -54,8 +55,6 @@ CreateThread(function()
 
         if not inRange then
             Wait(1000)
-        else
-            Wait(1)
         end
     end
 end)
